@@ -6,7 +6,7 @@ The script will open chrome, dowload the cursor. Then it gets the base directory
 This controller emulates a HID keyboard and programatically sends keystrokes.
 
 ### Target requirements
--if regedit already has folders open the cursor will get lost
+- if regedit already has folders open the cursor will get lost
 - The script uses chrome, could be changed to ie
 
 ### Problems -
