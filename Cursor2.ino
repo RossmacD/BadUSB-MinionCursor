@@ -3,16 +3,14 @@
 #define ARROW_DOWN 0x51
 #define ARROW_LEFT 0x50
 #define ARROW_RIGHT 0x4F
+
+//For international keyboard layouts
 #define KEY_BACKSLASH 0x64
 #define KEY_DELETE 0x2A
 
-//%USERPROFILE%\Downloads\Minion.cur
-
-//set-location -path 'HKCU:\Control Panel\Cursors'
-
 void setup() {
-  //Download
-    DigiKeyboard.sendKeyStroke(0);
+  //Download cursor
+  DigiKeyboard.sendKeyStroke(0);
   DigiKeyboard.delay(500);
   DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
   DigiKeyboard.delay(500);
@@ -32,17 +30,19 @@ void setup() {
   DigiKeyboard.println("clip");
   DigiKeyboard.delay(70);
 
-//open control panel
+  //open regedit
   DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
   DigiKeyboard.delay(70);
   DigiKeyboard.println("regedit");
-   DigiKeyboard.delay(800);
-   DigiKeyboard.sendKeyStroke(ARROW_LEFT);
-   DigiKeyboard.delay(70);
-   DigiKeyboard.sendKeyStroke(KEY_ENTER);
-   DigiKeyboard.delay(500);
-   
-   //Down 2,Right, Down 3, right, down 5,tab, down 2,enter, cursro location,
+  DigiKeyboard.delay(1000);
+  //Accept admin prompt
+  DigiKeyboard.sendKeyStroke(ARROW_LEFT);
+  DigiKeyboard.delay(70);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(500);
+
+  //Go to cursor directory
+  //Down 2,Right, Down 3, right, down 5,tab, down 2,enter, cursro location,
   DigiKeyboard.sendKeyStroke(ARROW_DOWN);
   DigiKeyboard.delay(70);
   DigiKeyboard.sendKeyStroke(ARROW_DOWN);
@@ -77,13 +77,11 @@ void setup() {
   DigiKeyboard.delay(70);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(100);
-  
+
   //Paste Directory
   DigiKeyboard.sendKeyStroke(KEY_V, MOD_CONTROL_LEFT);
   DigiKeyboard.delay(300);
-//  DigiKeyboard.sendKeyStroke(KEY_DELETE);
-//  DigiKeyboard.delay(300);
-  
+  //Type rest of Directory
   DigiKeyboard.sendKeyStroke(KEY_BACKSLASH);
   DigiKeyboard.delay(70);
   DigiKeyboard.print("Downloads");
@@ -92,13 +90,13 @@ void setup() {
   DigiKeyboard.delay(70);
   DigiKeyboard.println("Minion.cur");
   DigiKeyboard.delay(500);
+
+  //Close opened windows
   DigiKeyboard.sendKeyStroke(KEY_F4, MOD_ALT_LEFT);
   DigiKeyboard.delay(1000);
   DigiKeyboard.sendKeyStroke(KEY_F4, MOD_ALT_LEFT);
   DigiKeyboard.delay(1000);
   DigiKeyboard.sendKeyStroke(KEY_W, MOD_CONTROL_LEFT);
-  
-    
 }
 
 void loop() {
