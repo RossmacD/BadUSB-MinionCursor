@@ -1,5 +1,5 @@
 # BadUSB-MinionCursor
-This is a badusb script which changes the cursor to a minion from the windows registry.
+This is a digispark badusb script which changes the cursor to a minion from the windows registry.
 The script will open chrome, dowload the cursor. Then it gets the base directory from cmd. This is used when the path of the cursor is put into regedit
 
 ### Runs on digispark attiny85.
