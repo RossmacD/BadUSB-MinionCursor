@@ -14,7 +14,7 @@ void setup() {
   DigiKeyboard.delay(500);
   DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
   DigiKeyboard.delay(500);
-  DigiKeyboard.print("chrome.exe -incognito http://www.rw-designer.com/cursor-download.php?id=75100");
+  DigiKeyboard.print("chrome.exe -incognito https://rossmacd.com/Minion.ani");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(3000);
 
@@ -88,7 +88,7 @@ void setup() {
   DigiKeyboard.delay(70);
   DigiKeyboard.sendKeyStroke(KEY_BACKSLASH);
   DigiKeyboard.delay(70);
-  DigiKeyboard.println("Minion.cur");
+  DigiKeyboard.println("Minion.ani");
   DigiKeyboard.delay(500);
 
   //Close opened windows
